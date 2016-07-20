@@ -17,7 +17,7 @@ function createGenerator() {
         resultBlock2.innerHTML = s;
     };
 
-		document.getElementById('fMap').onclick = function() {
+    document.getElementById('fMap').onclick = function() {
         var squareGen = funcmap(square, generator);
         var resultBlock4 = document.getElementById("resultBlock4");
         resultBlock4.innerHTML = squareGen();
@@ -45,28 +45,30 @@ function take(fn, count) {
     return array;
 }
 
-function arrayMap(){
-				var array = document.getElementById("array").value;
-        var s = map(square, array);
-        var resultBlock3 = document.getElementById("resultBlock3");
-        resultBlock3.innerHTML = s;
+function arrayMap() {
+    var array = document.getElementById("array").value;
+    var s = map(square, array);
+    var resultBlock3 = document.getElementById("resultBlock3");
+    resultBlock3.innerHTML = s;
 }
 
 function map(fn, a) {
-   var r = [];
-   array = a.match(/\d+/g);
-   for(var i = 0; i < array.length; i++){
-   			r[i] = fn(array[i]);
-   }
-   return r;
+    var r = [];
+    array = a.match(/\d+/g);
+    for (var i = 0; i < array.length; i++) {
+        r[i] = fn(array[i]);
+    }
+    return r;
 }
 
-function square(x) { return x * x; }
+function square(x) {
+    return x * x;
+}
 
-function funcmap(fn, gen){
-		var num = gen();
+function funcmap(fn, gen) {
+    var num = gen();
     var n = fn(num);
-    return function(){
-				return n;
+    return function() {
+        return n;
     }
 }
