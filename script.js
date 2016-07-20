@@ -38,3 +38,21 @@ function take(fn, count) {
     }
     return array;
 }
+
+function arrayMap(){
+				var array = document.getElementById("array").value;
+        var s = map(square, array);
+        var resultBlock3 = document.getElementById("resultBlock3");
+        resultBlock3.innerHTML = s;
+}
+
+function map(fn, a) {
+   var r = [];
+   array = a.match(/\d+/g);
+   for(var i = 0; i < array.length; i++){
+   			r[i] = fn(array[i]);
+   }
+   return r;
+}
+
+function square(x) { return x * x; }
