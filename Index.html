@@ -9,22 +9,30 @@
     </head>
 
     <body>
-        <div class="task1">
-          <h1>Task1</h1>
-            <label>start:
+        <div class="task">
+            <h1>Task1</h1>
+            <label>Start number:
                 <input type="text" id="start" value="10" />
             </label>
-            <label>step:
+            <label>Step:
                 <input type="text" id="step" value="3" />
             </label>
             <br>
             <br>
             <input type="button" value="Create generator" onclick="createGenerator()">
-
             <input type="button" value="Calculate" id="calc">
-            <div id="result_block">
-                Result
-            </div>
+            <div id="resultBlock1"></div>
+        </div>
+
+        <div class="task">
+            <h1>Task2</h1>
+            <label>Count:
+                <input type="text" id="count" value="5" />
+            </label>
+            <br>
+            <br>
+            <input type="button" value="ShowArray" id="showArray">
+            <div id="resultBlock2"></div>
         </div>
     </body>
 
