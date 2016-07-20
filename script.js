@@ -16,6 +16,12 @@ function createGenerator() {
         var resultBlock2 = document.getElementById("resultBlock2");
         resultBlock2.innerHTML = s;
     };
+
+		document.getElementById('fMap').onclick = function() {
+        var squareGen = funcmap(square, generator);
+        var resultBlock4 = document.getElementById("resultBlock4");
+        resultBlock4.innerHTML = squareGen();
+    };
 }
 
 function writeResult(g) {
@@ -56,3 +62,11 @@ function map(fn, a) {
 }
 
 function square(x) { return x * x; }
+
+function funcmap(fn, gen){
+		var num = gen();
+    var n = fn(num);
+    return function(){
+				return n;
+    }
+}
