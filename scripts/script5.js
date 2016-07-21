@@ -5,9 +5,9 @@ function MyBind(){
 }
 
 function Check_Bind(){
-    var result = partial(mult, null, 5, 2);
+    var result = partial(mult, null, 3, 2, 1);
     var resultBlock5 = document.getElementById("resultBlock5");
-    resultBlock5.innerHTML = result(2, 2);
+    resultBlock5.innerHTML = result(2);
 }
 
 function partial(func, context) {
