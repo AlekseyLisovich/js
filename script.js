@@ -65,10 +65,18 @@ function square(x) {
     return x * x;
 }
 
-function funcmap(fn, gen) {
-    var num = gen();
-    var n = fn(num);
+function add(a, b) {
+    return a + b;
+}
+
+function check() {
+  var fm = funcmap(square, add);
+  var resultBlock4 = document.getElementById("resultBlock4");
+  resultBlock4.innerHTML = fm(1, 1);
+}
+
+function funcmap(fn, f) {
     return function() {
-        return n;
+        return fn(f(arguments[0], arguments[1]));
     }
 }
