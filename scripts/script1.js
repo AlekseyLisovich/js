@@ -13,7 +13,7 @@ function CreateGenerator() {
 
   function writeResult(gen) {
       var resultBlock1 = document.getElementById("resultBlock1");
-      resultBlock1.innerHTML = gen();
+      resultBlock1.innerHTML ="Result: " + gen();
   }
 
   function sequence(start, step) {

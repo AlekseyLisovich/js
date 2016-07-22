@@ -1,13 +1,13 @@
 function PartialAny() {
-    var result = partialAny(add, null, 5);
+    var result = partialAny(add, null, undefined);
     var resultBlock6 = document.getElementById("resultBlock6");
-    resultBlock6.innerHTML = result(2);
+    resultBlock6.innerHTML = "First agr: undefined, second arg: 2 Result: " + result(2);
 }
 
 function Check_PartialAny() {
-    var result = partialAny(mult, null, 5, 3);
+    var result = partialAny(mult, null, 1, undefined, 1);
     var resultBlock6 = document.getElementById("resultBlock6");
-    resultBlock6.innerHTML = result(2, 3);
+    resultBlock6.innerHTML = "First agr: [1, undefined, 1], second args: [2, 4] Result: " + result(2, 4);
 }
 
 function partialAny(func, context) {
@@ -18,10 +18,13 @@ function partialAny(func, context) {
         var j = 0;
         var checkArray = args1.concat(args2);
         for (var i = 0; i < checkArray.length; i++) {
-            if (typeof checkArray[i] == "undefined")
+            if (checkArray[i] == undefined)
+            {
                 checkArray[i] = arguments[j];
+              }
             j++;
         }
+        alert(checkArray);
         return func.apply(context, checkArray);
     };
 }

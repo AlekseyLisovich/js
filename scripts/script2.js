@@ -3,7 +3,7 @@ function ShowArray(){
     var generator = sequence(1, 3);
     var result = take(generator, parseInt(count));
     var resultBlock2 = document.getElementById("resultBlock2");
-    resultBlock2.innerHTML = result;
+    resultBlock2.innerHTML = "sequence(1, 3) result: " + result;
 }
 
 function take(fn, count) {
