@@ -1,9 +1,8 @@
 function ShowArray(){
     var count = document.getElementById("count").value;
     var generator = sequence(1, 3);
-    var result = take(generator, parseInt(count));
-    var resultBlock2 = document.getElementById("resultBlock2");
-    resultBlock2.innerHTML = result;
+    var result = "sequence(1, 3) result: " + take(generator, parseInt(count));
+    window.utils.writeResult(resultBlock2, result);
 }
 
 function take(fn, count) {

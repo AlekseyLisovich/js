@@ -1,27 +1,26 @@
 function PartialAny() {
-    var result = partialAny(add, null, 5);
-    var resultBlock6 = document.getElementById("resultBlock6");
-    resultBlock6.innerHTML = result(2);
+    var gen = partialAny(add, null, undefined);
+    var result = "First agr: undefined, second arg: 2 Result: " + gen(2);
+    window.utils.writeResult(resultBlock6, result);
 }
 
 function Check_PartialAny() {
-    var result = partialAny(mult, null, 5, 3);
-    var resultBlock6 = document.getElementById("resultBlock6");
-    resultBlock6.innerHTML = result(2, 3);
+    var gen = partialAny(mult, null, 1, undefined, 1);
+    var result = "First agr: [1, undefined, 1], second args: [2, 4] Result: " + gen(2, 4);
+    window.utils.writeResult(resultBlock6, result);
 }
 
 function partialAny(func, context) {
-    var args1 = Array.prototype.slice.call(arguments);
-    args1 = args1.slice(2);
+    var cuttedArguments = Array.prototype.slice.call(arguments, 2);
+
     return function() {
-        var args2 = Array.prototype.slice.call(arguments);
-        var j = 0;
-        var checkArray = args1.concat(args2);
-        for (var i = 0; i < checkArray.length; i++) {
-            if (typeof checkArray[i] == "undefined")
-                checkArray[i] = arguments[j];
-            j++;
+        var checkArray = cuttedArguments.concat(Array.prototype.slice.call(arguments));
+        for (var i = 0, j = 0; i < checkArray.length; i++) {
+            if (typeof checkArray[i] === "undefined") {
+                checkArray[i] = arguments[j++];
+            }
         }
+        alert(checkArray);
         return func.apply(context, checkArray);
     };
 }

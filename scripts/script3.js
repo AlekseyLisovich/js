@@ -1,8 +1,7 @@
 function ArrayMap() {
     var array = document.getElementById("array").value;
-    var result = numSquare(square, array);
-    var resultBlock3 = document.getElementById("resultBlock3");
-    resultBlock3.innerHTML = result;
+    var result = "X^2 Result: " + numSquare(square, array);
+    window.utils.writeResult(resultBlock3, result);
 }
 
 function numSquare(func, a) {

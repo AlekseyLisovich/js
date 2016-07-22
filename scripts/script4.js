@@ -1,13 +1,13 @@
 function MyMap(){
-    var result = map(square, mult);
-    var resultBlock4 = document.getElementById("resultBlock4");
-    resultBlock4.innerHTML = result(1, 1, 2, 2);
+    var gen = map(square, mult);
+    var result = "Multiplication Result: " + gen(1, 1, 2, 2);
+    window.utils.writeResult(resultBlock4, result);
   }
 
   function Check_Map(){
-      var result = map(square, add);
-      var resultBlock4 = document.getElementById("resultBlock4");
-      resultBlock4.innerHTML = result(1, 1);
+      var gen = map(square, add);
+      var result = "Addition Result: " + gen(1, 1);
+      window.utils.writeResult(resultBlock4, result);
     }
 
   function map(fn, f) {
