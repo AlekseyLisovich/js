@@ -16,15 +16,8 @@
         window.utils.writeResult(resultBlock1, result);
     }
 
-<<<<<<< HEAD
     function sequence(start, step) {
         var currentIteration = 0;
-=======
-  function writeResult(gen) {
-      var resultBlock1 = document.getElementById("resultBlock1");
-      resultBlock1.innerHTML ="Result: " + gen();
-  }
->>>>>>> f1805a9c1bf966828e8da9fe77026abfb38c1081
 
         return function() {
             return start + step * currentIteration++;
