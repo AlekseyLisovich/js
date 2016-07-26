@@ -36,7 +36,7 @@ function findAndSort(source, propertyName) {
     for (var i = 0; i < source.length; i++) {
         result += "City: " + source[i].city + " , population: " + source[i].population + "<br>";
     }
-    window.utils.writeResult(resultBlock11, result);
+    window.utils.writeResult('resultBlock11', result);
 }
 
 function GetCities(){

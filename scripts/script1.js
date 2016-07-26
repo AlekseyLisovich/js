@@ -4,7 +4,7 @@
         var stepNum = document.getElementById("step").value;
 
         var generator = sequence(+startNum, +stepNum);
-        window.utils.writeResult(resultBlock1, "Generator created");
+        window.utils.writeResult('resultBlock1', "Generator created");
 
         document.getElementById('calculateSequence').onclick = function() {
             writeResult(generator);
@@ -13,7 +13,7 @@
 
     function writeResult(gen) {
         var result = "Result: " + gen();
-        window.utils.writeResult(resultBlock1, result);
+        window.utils.writeResult('resultBlock1', result);
     }
 
     function sequence(start, step) {

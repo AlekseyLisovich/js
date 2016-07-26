@@ -1,9 +1,5 @@
-function getPropertyNames(source) {
-     var count = 0;
-     for (var prop in source) {
-         count++;
-    }
-     return count;
+function getOwnPropertyCount(source) {
+     return Object.keys(source).length;
 }
 
 var obj1 = {
@@ -19,11 +15,11 @@ var obj2 = {
 };
 
 function GetProperty() {
-    var result = "The count of properties: " + getPropertyNames(obj1);
-    window.utils.writeResult(resultBlock10, result);
+    var result = "The count of properties: " + getOwnPropertyCount(obj1);
+    window.utils.writeResult('resultBlock10', result);
 }
 
 function GetProperty_Check() {
-    var result = "The count of properties: " + getPropertyNames(obj2);
-    window.utils.writeResult(resultBlock10, result);
+    var result = "The count of properties: " + getOwnPropertyCount(obj2);
+    window.utils.writeResult('resultBlock10', result);
 }

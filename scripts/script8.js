@@ -15,7 +15,7 @@ function findName(source, propertyName) {
  });
 
   var result = "Names: " + names;
-  window.utils.writeResult(resultBlock8, result);
+  window.utils.writeResult('resultBlock8', result);
 }
 
 function GetName(){

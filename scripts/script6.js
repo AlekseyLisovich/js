@@ -1,13 +1,13 @@
 function PartialAny() {
     var gen = partialAny(add, null, undefined);
     var result = "First agr: undefined, second arg: 2 Result: " + gen(2);
-    window.utils.writeResult(resultBlock6, result);
+    window.utils.writeResult('resultBlock6', result);
 }
 
 function Check_PartialAny() {
     var gen = partialAny(mult, null, 1, undefined, 1);
     var result = "First agr: [1, undefined, 1], second args: [2, 4] Result: " + gen(2, 4);
-    window.utils.writeResult(resultBlock6, result);
+    window.utils.writeResult('resultBlock6', result);
 }
 
 function partialAny(func, context) {

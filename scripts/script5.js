@@ -1,12 +1,12 @@
 function MyBind(){
     var result = partial(add, null, 5);
-    var resultBlock5 = document.getElementById("resultBlock5");
+    var resultBlock5 = document.getElementById('resultBlock5');
     resultBlock5.innerHTML = "First agr: 5, second arg: 2 Result: " + result(2);
 }
 
 function Check_Bind(){
     var result = partial(mult, null, 3, 2, 1);
-    var resultBlock5 = document.getElementById("resultBlock5");
+    var resultBlock5 = document.getElementById('resultBlock5');
     resultBlock5.innerHTML = "First agrs: [3, 2, 1], second arg: 2 Result: " + result(2);
 }
 

@@ -16,11 +16,11 @@ function BindFn(context, func) {
 function BindThis(){
   var gen = BindFn(ctx1, f);
   var result = "this.x:2 + a:1 + b:2 = " + gen(1, 2);
-  window.utils.writeResult(resultBlock7, result);
+  window.utils.writeResult('resultBlock7', result);
 }
 
 function BindThis_Check(){
   var gen = BindFn(ctx2, f);
   var result = "this.x:7 + a:1 + b:2 = " + gen(1, 2);
-  window.utils.writeResult(resultBlock7, result);
+  window.utils.writeResult('resultBlock7', result);
 }

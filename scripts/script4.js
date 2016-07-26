@@ -1,13 +1,13 @@
 function MyMap(){
     var gen = map(square, mult);
     var result = "Multiplication Result: " + gen(1, 1, 2, 2);
-    window.utils.writeResult(resultBlock4, result);
+    window.utils.writeResult('resultBlock4', result);
   }
 
   function Check_Map(){
       var gen = map(square, add);
       var result = "Addition Result: " + gen(1, 1);
-      window.utils.writeResult(resultBlock4, result);
+      window.utils.writeResult('resultBlock4', result);
     }
 
   function map(fn, f) {

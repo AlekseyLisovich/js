@@ -62,12 +62,12 @@ function MyHamburger() {
     var hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
     hamburger.addTopping(Hamburger.TOPPING_MAYO);
     var result = hamburger.calculatePrice() + ", " + hamburger.calculateCalories();
-    window.utils.writeResult(resultBlock12, result);
+    window.utils.writeResult('resultBlock12', result);
 }
 
 function MyHamburger_Check(){
   var hamburger = new Hamburger(Hamburger.SIZE_BIG, Hamburger.STUFFING_CHEESE);
   hamburger.addTopping(Hamburger.TOPPING_SAUCE);
   var result = hamburger.calculatePrice() + ", " + hamburger.calculateCalories();;
-  window.utils.writeResult(resultBlock12, result);
+  window.utils.writeResult('resultBlock12', result);
 }

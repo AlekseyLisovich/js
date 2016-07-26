@@ -2,7 +2,7 @@ function ShowArray(){
     var count = document.getElementById("count").value;
     var generator = sequence(1, 3);
     var result = "sequence(1, 3) result: " + take(generator, parseInt(count));
-    window.utils.writeResult(resultBlock2, result);
+    window.utils.writeResult('resultBlock2', result);
 }
 
 function take(fn, count) {
