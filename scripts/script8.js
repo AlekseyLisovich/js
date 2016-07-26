@@ -13,9 +13,7 @@ function findName(source, propertyName) {
    source.forEach(function(item) {
    names.push(item[propertyName]);
  });
-//  var names = source.map(function(item){
-//      return item && item[propertyName];
-//  });
+
   var result = "Names: " + names;
   window.utils.writeResult(resultBlock8, result);
 }

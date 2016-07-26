@@ -67,7 +67,7 @@ function MyHamburger() {
 
 function MyHamburger_Check(){
   var hamburger = new Hamburger(Hamburger.SIZE_BIG, Hamburger.STUFFING_CHEESE);
-  hamburger.addTopping(Hamburger.TOPPING_MAYO);
+  hamburger.addTopping(Hamburger.TOPPING_SAUCE);
   var result = hamburger.calculatePrice() + ", " + hamburger.calculateCalories();;
   window.utils.writeResult(resultBlock12, result);
 }
