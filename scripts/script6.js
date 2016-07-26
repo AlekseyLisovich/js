@@ -20,7 +20,6 @@ function partialAny(func, context) {
                 checkArray[i] = arguments[j++];
             }
         }
-        alert(checkArray);
         return func.apply(context, checkArray);
     };
 }
