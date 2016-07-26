@@ -18,17 +18,11 @@ return 0;
 }
 
 function findAndSort(source, propertyName) {
-    /*var propArray = [];
-    source.forEach(function(item) {
-        propArray.push(item[propertyName]);
-    });*/
-
     cities = cities.sort(comparePopulation);
     var result = "";
     for (var i = 0; i < cities.length; i++) {
         result += "City: " + cities[i].city + " , population: " + cities[i].population + "<br>";
     }
-    
     window.utils.writeResult(resultBlock11, result);
 }
 
